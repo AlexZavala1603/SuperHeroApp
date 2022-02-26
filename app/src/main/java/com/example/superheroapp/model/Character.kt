@@ -1,5 +1,8 @@
 package com.example.superheroapp.model
 
+import java.io.Serializable
+import java.util.*
+
 /*
 * @param id (int, optional): The unique ID of the character resource.
 * @param name (string, optional): The name of the character.
@@ -12,6 +15,6 @@ data class Character(
     var id:Int,
     var name:String,
     var description: String,
-    var modified: String,
+    var modified: Date,
     var thumbnail: Thumbnail
-)
+): Serializable
