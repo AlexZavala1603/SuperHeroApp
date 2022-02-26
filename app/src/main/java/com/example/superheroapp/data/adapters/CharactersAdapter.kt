@@ -12,6 +12,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.superheroapp.R
 import com.example.superheroapp.databinding.ItemCharacterBinding
 import com.example.superheroapp.utils.OnItemClickListener
+import com.example.superheroapp.utils.convertLongToTime
 
 class CharactersAdapter(private val listener: OnItemClickListener) : RecyclerView.Adapter<CharactersAdapter.CharactersHolder>() {
 
@@ -44,7 +45,7 @@ class CharactersAdapter(private val listener: OnItemClickListener) : RecyclerVie
 
             binding.txtId.text = item.id.toString()
             binding.txtName.text = item.name
-            binding.txtDate.text = item.modified
+            binding.txtDate.text = item.modified.time.convertLongToTime()
 
             val options: RequestOptions = RequestOptions().centerCrop().placeholder(R.drawable.default_placeholder).error(R.drawable.error_placeholder)
             val url = item.thumbnail.path + "." + item.thumbnail.extension

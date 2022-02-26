@@ -12,6 +12,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.superheroapp.R
 import com.example.superheroapp.databinding.FragmentCharactersDetailedBinding
 import com.example.superheroapp.model.Character
+import com.example.superheroapp.utils.convertLongToTime
 
 class CharactersDetailedFragment : Fragment() {
 
@@ -41,7 +42,7 @@ class CharactersDetailedFragment : Fragment() {
 
         binding.txtName.text = item.name
         binding.txtDescription.text = item.description
-        binding.txtDate.text = item.modified
+        binding.txtDate.text = item.modified.time.convertLongToTime()
 
         binding.fabBack.setOnClickListener {
             Navigation.findNavController(it)
