@@ -13,14 +13,13 @@ import retrofit2.Response
 
 class CharactersViewModel: ViewModel() {
 
-    // La lista no cambia pero el contenido de los elementos de esa lista sí.
-    // Por ello se usa un val pero tambien un MutableLiveData.
+    // The list does not change but the content of the elements of that list does.
+    // Therefore a val is used but also a MutableLiveData.
     val superherosList = MutableLiveData<List<Character>>()
     val currentPage = MutableLiveData<Int>()
     val isInitializing = MutableLiveData<Boolean>()
     val isLoading = MutableLiveData<Boolean>()
 
-    // Creamos la instancia del caso de uso.
     private val getAllSuperherosUseCase = GetAllSuperheros()
 
     fun onCreate(){
