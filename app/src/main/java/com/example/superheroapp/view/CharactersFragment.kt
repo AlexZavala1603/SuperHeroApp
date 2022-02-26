@@ -50,7 +50,7 @@ class CharactersFragment : Fragment() {
             layoutManager = GridLayoutManager(context, 2)
         }
 
-        binding.scrollView.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+        binding.scrollView.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { v, _, scrollY, _, _ ->
             if (scrollY == v?.getChildAt(0)?.measuredHeight!! - v.measuredHeight) {
                 // When reach last item position
                 // Increase page size
