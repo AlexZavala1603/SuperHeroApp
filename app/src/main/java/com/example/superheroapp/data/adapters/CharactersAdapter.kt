@@ -42,6 +42,7 @@ class CharactersAdapter(private val listener: OnItemClickListener) : RecyclerVie
         fun bind(item: Character, listener: OnItemClickListener?) {
             binding.cardCharacter.setOnClickListener { listener?.onItemClick(item) }
 
+            binding.txtId.text = item.id.toString()
             binding.txtName.text = item.name
             binding.txtDate.text = item.modified
 
