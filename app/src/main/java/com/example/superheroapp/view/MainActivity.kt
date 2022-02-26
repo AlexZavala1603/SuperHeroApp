@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
-import com.example.superheroapp.R
 import com.example.superheroapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
